@@ -9,11 +9,16 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'easymotion/vim-easymotion'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
 set rtp+=/root/.fzf
 set background=dark
+
+colorscheme gruvbox
 
 filetype plugin on
 set shiftwidth=2
@@ -29,6 +34,7 @@ let g:mapleader=" "
 nnoremap <Leader>/ :Ag<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :buffers<CR>:buffer<SPACE>
+nnoremap <Leader>t :NERDTreeToggle<CR>
 
-colorscheme gruvbox
-
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list

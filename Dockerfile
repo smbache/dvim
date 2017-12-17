@@ -9,7 +9,7 @@ RUN apk add --update \
     git \ 
     the_silver_searcher \
  && git clone --depth 1 --quiet https://github.com/junegunn/fzf.git ~/.fzf \
- && ~/.fzf/install \
+ && ~/.fzf/install --key-bindings --update-rc --completion \
  && curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs --silent \
          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
