@@ -7,6 +7,5 @@ machines where vim is unavailable.
 ## Usage 
 
 ```
-docker run --rm -v ${PWD}:/proj -it smbache/dvim:latest
+docker run --rm -v ${PWD}:/wd -it smbache/dvim:latest
 ```
-

@@ -19,6 +19,6 @@ RUN nvim -i NONE -c PlugInstall -c quitall > /dev/null 2>&1
 
 ENV FZF_DEFAULT_COMMAND 'ag -g ""'
 
-WORKDIR /proj
+WORKDIR /wd
 
 CMD ["nvim"]

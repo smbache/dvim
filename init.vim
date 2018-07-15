@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/vim-peekaboo'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
@@ -31,10 +32,20 @@ set cursorline
 
 let g:mapleader=" "
 
+command! Rmws %s/\s\+$//e
+
 nnoremap <Leader>/ :Ag<CR>
+nnoremap <Leader>` :! make test<CR>
+nnoremap <Leader><c-l> :call fzf#vim#buffer_lines(expand('<cword>'))<CR>
+nnoremap <Leader><c-L> :call fzf#vim#lines(expand('<cword>'))<CR>
 nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>b :buffers<CR>:buffer<SPACE>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>l :BLines<CR>
+nnoremap <Leader>L :Lines<CR>
+nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
+
+set clipboard+=unnamedplus
