@@ -35,7 +35,6 @@ let g:mapleader=" "
 command! Rmws %s/\s\+$//e
 
 nnoremap <Leader>/ :Ag<CR>
-nnoremap <Leader>` :! make test<CR>
 nnoremap <Leader><c-l> :call fzf#vim#buffer_lines(expand('<cword>'))<CR>
 nnoremap <Leader><c-L> :call fzf#vim#lines(expand('<cword>'))<CR>
 nnoremap <Leader>f :Files<CR>
